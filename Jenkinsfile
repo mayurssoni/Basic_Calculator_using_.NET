@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'github', url: '$GIT_URL'
+                git branch: 'main', credentialsId: 'github', url: GIT_URL
             }
         }
     }
