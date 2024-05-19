@@ -31,6 +31,33 @@ namespace Calculator
             Console.Write("\nEnter Operation Symbol:");
             string symb = Console.ReadLine() ?? "+";
             if (symb == "X" ^ symb == "x") { symb = "*"; }
+
+            double res = 0;
+            Console.WriteLine("\nResult:\n------------------------------------");
+            switch (symb)
+            {
+                case "+":
+                    res = num1 + num2;
+                    Console.WriteLine($"{num1} + {num2} = {res}");
+                    break;
+
+                case "-":
+                    res = num1 - num2;
+                    Console.WriteLine($"{num1} - {num2} = {res}");
+                    break;
+
+                case "*":
+                    res = num1 * num2;
+                    Console.WriteLine($"{num1} * {num2} = {res}");
+                    break;
+
+                case "/":
+                    res = num1 / num2;
+                    Console.WriteLine($"{num1} / {num2} = {res}");
+                    break;
+
+                default: Console.WriteLine("Invalid Operation"); break;
+            }
         }
         public static void Main(string[] args)
         {
